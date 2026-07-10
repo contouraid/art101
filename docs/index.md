@@ -1,8 +1,6 @@
 Techniques for Automation in Radiotherapy Applications
 ===================================
 
-This is a WIP (Work-In-Progress): this message will be removed once sufficient progress has been made. 
-
 TARA stands for Techniques for Automation in Radiotherapy Applications is a set of notes on AI in Radiation Oncology.
 
 ## [1: Introduction](intro/intro.md)

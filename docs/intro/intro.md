@@ -1,30 +1,5 @@
 # 1: Introduction
 
-- [1: Introduction](#1-introduction)
-  - [What is Radiation Oncology?](#what-is-radiation-oncology)
-    - [How is Treatment Planned?](#how-is-treatment-planned)
-  - [A Brief History of AI](#a-brief-history-of-ai)
-  - [AI In Radiation Oncology](#ai-in-radiation-oncology)
-    - [Examples of AI in Action](#examples-of-ai-in-action)
-  - [Types of Machine Learning](#types-of-machine-learning)
-    - [Supervised Learning](#supervised-learning)
-    - [Unsupervised Learning](#unsupervised-learning)
-    - [Reinforcement Learning](#reinforcement-learning)
-    - [Semi-supervised and Self-supervised Learning](#semi-supervised-and-self-supervised-learning)
-  - [Key Machine Learning Algorithms](#key-machine-learning-algorithms)
-    - [Linear and Logistic Regression](#linear-and-logistic-regression)
-    - [Decision Trees and Random Forests](#decision-trees-and-random-forests)
-    - [Support Vector Machines](#support-vector-machines)
-    - [K-means Clustering](#k-means-clustering)
-  - [Challenges and Opportunities](#challenges-and-opportunities)
-  - [Basics of Model Evaluation](#basics-of-model-evaluation)
-    - [Train-Test Splits and Cross-Validation](#train-test-splits-and-cross-validation)
-    - [Overfitting and Underfitting](#overfitting-and-underfitting)
-    - [Performance Metrics](#performance-metrics)
-  - [Limitations of Traditional Machine Learning](#limitations-of-traditional-machine-learning)
-    - [Want to Learn More?](#want-to-learn-more)
-
-
 ## What is Radiation Oncology?
 
 Radiation oncology is a key part of cancer treatment. In fact, more than half of all cancer patients receive radiotherapy at some point during their care [(Belanger et al., 2019)](https://iopscience.iop.org/article/10.1088/1361-6560/ab1817)[(Delaney et al., 2005)](https://acsjournals.onlinelibrary.wiley.com/doi/10.1002/cncr.21324). This specialty stands out because it relies heavily on technology and computers, making it a natural fit for computational and data science methods [(Vogelius et al., 2020)](https://febs.onlinelibrary.wiley.com/doi/10.1002/1878-0261.12685).
@@ -215,7 +190,7 @@ These limitations motivated the development of deep learning, which can automati
 
 ### Want to Learn More?
 
-A [glossary](../_pages/glossary.md) of terms has been compiled to help demystify the acronyms and keywords in this field.
+A {ref}`glossary <fundamental-ai-glossary>` of terms has been compiled to help demystify the acronyms and keywords in this field.
 
 **Foundational Review Articles and Survey Papers:**
 
@@ -286,4 +261,3 @@ The following textbooks and foundational papers provide comprehensive coverage o
 
 - **Sutton, R. S., & Barto, A. G.** (2018). *Reinforcement Learning: An Introduction* (2nd ed.). MIT Press. Comprehensive textbook on reinforcement learning fundamentals.
 - **Kober, J., Bagnell, J. A., & Peters, J.** (2013). Reinforcement learning in robotics: A survey. *International Journal of Robotics Research*, 32(11), 1238-1274. Survey of RL applications including challenges in real-world domains.
-

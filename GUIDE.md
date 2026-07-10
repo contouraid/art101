@@ -36,7 +36,8 @@ tara/
 │   ├── validation/validation.md              # 9: Validation and Evaluation of AI Models
 │   └── workflow/workflow.md                  # 10: Integration of AI into Clinical Workflow
 │
-└── todo/                         # Open content gaps and the literature-review log (see below)
+└── todo/                         # Open content gaps, completed archive, and review log
+    └── done/                    # Completed todos retained as an audit trail
 ```
 
 **Two governing rules apply everywhere:**
@@ -55,7 +56,7 @@ Every chapter file (`docs/<folder>/<name>.md`) must contain, in this order:
 4. **`## Recap`** — a short summary paragraph.
 5. **`## References`** — numbered list, one entry per source cited anywhere in the chapter, each with a resolvable URL (DOI, PubMed, arXiv, or publisher link).
 
-A chapter that has only a title and no body (`fundamentalRO.md`, `registration.md`, `qa.md`, `validation.md`, `workflow.md`, and the `vlm.md` sub-page all currently look like this) is a **Critical** gap, not a Medium one — see `todo/p0-write-stub-chapters.md`.
+A chapter that has only a title and no body is a **Critical** gap, not a Medium one. The original six-stub gap and its resolution are retained in `todo/done/p0-write-stub-chapters.md`.
 
 ---
 
@@ -88,7 +89,7 @@ When the agent is run to update this book, it must, in order:
 2. Work chapter by chapter. For each chapter with open literature-currency todos (see `todo/`), run the searches described in Sourcing Rules above.
 3. Draft additions only to the `## Current Research and Recent Advances` section and `## References`, unless a `todo/` item explicitly calls for restructuring the body (e.g., the stub chapters, or the broken-anchor fix).
 4. Never delete existing verified content. If new evidence contradicts something already written, add a dated note rather than silently rewriting history (`_(update, 2026-07): later work suggests X; original claim retained for context._`).
-5. Update `todo/` per the lifecycle rules in `todo/README.md` — close todos that are now satisfied, open new ones for gaps discovered along the way.
+5. Update `todo/` per the lifecycle rules in `todo/README.md` — archive satisfied todos with completion notes under `todo/done/`, and open new ones for gaps discovered along the way.
 6. Append one entry to `todo/review-log.md` summarizing: which chapters were reviewed, what search queries were run, what was added, what was rejected and why, and which todos were opened or closed. This is the audit trail — without it, the next run has no way to know what was already tried.
 7. **Open a pull request; never push directly to `main`.** The PR description must list the todo filenames addressed and the sources consulted. A human reviews and merges. Once merged, `.github/workflows/docs.yml` rebuilds and republishes the site automatically — no manual deploy step is needed or should be taken.
 
@@ -100,7 +101,7 @@ When the agent is run to update this book, it must, in order:
 
 2. **Root level is navigation and process only.** `README.md`, `GUIDE.md`, and `todo/` are the only permitted top-level content outside `docs/` and repository tooling (`.github/`, `.gitignore`, `pyproject.toml`).
 
-3. **No hand-written GitHub-style TOC blocks inside chapters.** `sphinx_book_theme` already renders a full navigation sidebar from the document's actual headers. A manual `- [Title](#slug)` block duplicates that and silently breaks under MyST's header-slug rules the moment a heading is renamed — this is a real, currently-open defect (see `todo/p1-fix-broken-toc-anchors.md`, 145 Sphinx build warnings). If in-page navigation is wanted, use MyST's `{contents}` directive, which regenerates correctly.
+3. **No hand-written GitHub-style TOC blocks inside chapters.** `sphinx_book_theme` already renders a full navigation sidebar from the document's actual headers. A manual `- [Title](#slug)` block duplicates that and can silently break under MyST's header-slug rules when a heading is renamed. The original 145-warning defect and its resolution are recorded in `todo/done/p1-fix-broken-toc-anchors.md`. If in-page navigation is wanted, use MyST's `{contents}` directive, which regenerates correctly.
 
 4. **Every substantive chapter ends with `## Recap` and `## References`.** No exceptions once a chapter is out of stub state.
 
@@ -118,6 +119,6 @@ When the agent is run to update this book, it must, in order:
 
 ## What Is Missing
 
-All known content gaps — stub chapters, structural defects, and per-chapter literature-currency needs — are tracked as individual files in [`todo/`](todo/). See [`todo/README.md`](todo/README.md) for the current list and lifecycle rules, and [`todo/review-log.md`](todo/review-log.md) for the history of past autonomous review runs.
+All known open content gaps are tracked as individual files directly under [`todo/`](todo/); completed work is retained under [`todo/done/`](todo/done/). See [`todo/README.md`](todo/README.md) for the current list and lifecycle rules, and [`todo/review-log.md`](todo/review-log.md) for the history of past autonomous review runs.
 
 Do not maintain a gap list in this file. `todo/` is the single source of truth for open work.
