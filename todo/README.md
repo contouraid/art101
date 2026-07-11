@@ -1,4 +1,4 @@
-# TARA Content To-Do Tracker
+# ART101 Content To-Do Tracker
 
 This folder is the authoritative record of content work for this book. Files directly under `todo/` are open gaps; completed work is retained under `todo/done/` as an audit trail.
 

@@ -1,7 +1,7 @@
-Techniques for Automation in Radiotherapy Applications
+AI in RadioTherapy 101
 ===================================
 
-TARA stands for Techniques for Automation in Radiotherapy Applications is a set of notes on AI in Radiation Oncology.
+ART101 (AI in RadioTherapy 101) is a set of notes on how AI is used and impacting the radiotherapy workflow today.
 
 ## [1: Introduction](intro/intro.md)
 

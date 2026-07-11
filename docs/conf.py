@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = "TARA"
+project = "ART101"
 copyright = "2025, Amith Kamath"
 author = "Amith Kamath"
 

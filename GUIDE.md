@@ -1,4 +1,4 @@
-# TARA Content Guide
+# ART101 Content Guide
 
 This is the canonical reference for how this repository is organized, what standard every chapter must meet, and — critically — the rules an autonomous agent must follow when it updates this book on a recurring basis. When in doubt about where content goes or whether a change is safe to make, consult this file first.
 
@@ -6,7 +6,7 @@ This is the canonical reference for how this repository is organized, what stand
 
 ## Philosophy
 
-TARA ("Techniques for Automation in Radiotherapy Applications") is a living textbook on AI in Radiation Oncology, published to [contouraid.github.io/tara](https://contouraid.github.io/tara/). It is not a project-status document or a product roadmap — it is a reference a clinician, physicist, or engineer reads to learn the field.
+ART101 ("AI in RadioTherapy 101") is a living textbook giving an overview of how AI is used and impacting the radiotherapy workflow today, published to [contouraid.github.io/art101](https://contouraid.github.io/art101/). It is not a project-status document or a product roadmap — it is a reference a clinician, physicist, or engineer reads to learn the field.
 
 The intended reader is someone with a technical or clinical background who wants a structured, citable, up-to-date grounding in a specific sub-topic (contouring, registration, treatment planning, etc.) without having to survey the primary literature themselves.
 
@@ -17,7 +17,7 @@ The intended reader is someone with a technical or clinical background who wants
 ## Structure
 
 ```
-tara/
+art101/
 ├── GUIDE.md                      # This document — organization and update rules
 ├── README.md                     # One-paragraph repo snapshot and link to the published book
 ├── .github/workflows/docs.yml    # Builds docs/ with Sphinx and deploys to GitHub Pages on push to main
@@ -99,7 +99,7 @@ When the agent is run to update this book, it must, in order:
 
 1. **One home per topic.** If content belongs conceptually to two chapters (e.g., vision-language models touch both `fundamentalAI` and `contouring`), it lives in the more fundamental chapter and the other links to it. Never duplicate an explanation across chapters.
 
-2. **Root level is navigation and process only.** `README.md`, `GUIDE.md`, and `todo/` are the only permitted top-level content outside `docs/` and repository tooling (`.github/`, `.gitignore`, `pyproject.toml`).
+2. **Root level is navigation and process only.** `README.md`, `GUIDE.md`, and `todo/` are the only permitted top-level content outside `docs/` and repository tooling (`.github/`, `.gitignore`).
 
 3. **No hand-written GitHub-style TOC blocks inside chapters.** `sphinx_book_theme` already renders a full navigation sidebar from the document's actual headers. A manual `- [Title](#slug)` block duplicates that and can silently break under MyST's header-slug rules when a heading is renamed. The original 145-warning defect and its resolution are recorded in `todo/done/p1-fix-broken-toc-anchors.md`. If in-page navigation is wanted, use MyST's `{contents}` directive, which regenerates correctly.
 
