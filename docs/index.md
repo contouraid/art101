@@ -1,119 +1,54 @@
 AI in RadioTherapy 101
 ===================================
 
-ART101 (AI in RadioTherapy 101) is a set of notes on how AI is used and impacting the radiotherapy workflow today.
+**ART101 (AI in RadioTherapy 101)** is a set of notes on how artificial intelligence is used across the radiotherapy workflow today — what it does well, where the evidence is thin, and how to read a claim critically. It is written for radiation oncologists, medical physicists, dosimetrists, and the engineers and data scientists who build tools alongside them. No single background is assumed: the early chapters build the shared vocabulary, and later chapters apply it to specific steps in the clinical pathway.
 
-## [1: Introduction](intro/intro.md)
+A guiding theme runs through every chapter: **a model's technical score is not the same as clinical benefit.** Each topic is therefore presented with its methods *and* the standard of evidence needed to trust it in practice.
 
-* Overview of AI: Definition, history, and evolution of AI in healthcare.​
-* Relevance to Radiation Oncology: The role and potential of AI in enhancing radiation therapy workflows.​
-* Current Landscape: Review of existing AI applications in medical imaging and radiation therapy.​
+## How this book is organized
 
-## [2: Fundamentals of Artificial Intelligence through Deep Learning](fundamentalAI/index.md)
+The chapters move from foundations, to the imaging data everything depends on, to AI applied at each stage of care, and finally to the cross-cutting concerns of validation and clinical integration.
 
-* Machine Learning Basics: Supervised vs. unsupervised learning, key algorithms, and model evaluation metrics.​
-* Deep Learning Introduction: Neural networks, convolutional neural networks (CNNs), and their relevance to image analysis.​
-* Tools and Frameworks: Introduction to popular AI development tools and platforms.​
+### Foundations
 
-## [3: Fundamentals of Radiation Oncology](fundamentalRO/fundamentalRO.md)
+**[1: Introduction](intro/intro.md)** — Establishes the shared vocabulary (AI, machine learning, deep learning), the learning paradigms, and the "ladder of evidence" used to judge clinical AI claims. Read this first; every later chapter leans on its framing of technical performance versus clinical utility.
 
-* Background: Radiation Physics in Medicine.
-* Radiobiology: Treating cancers with high-energy radiation.
-* Evolution of Radiation Oncology: History, current state, and future.
+**[2: Fundamentals of AI through Deep Learning](fundamentalAI/index.md)** — Covers the machine-learning and deep-learning ideas that recur throughout the book: model training and evaluation, neural networks, convolutional architectures, and the newer vision–language and foundation models. Included so that readers can follow *how* the clinical tools in later chapters actually work, rather than treating them as black boxes.
 
-## [4: Medical Imaging in Radiation Oncology](medicalImaging/medicalImaging.md)
+**[3: Fundamentals of Radiation Oncology](fundamentalRO/fundamentalRO.md)** — A compact primer on radiation physics, radiobiology, and how a course of treatment is delivered. Included so that readers from a computing background understand the clinical problem AI is being asked to help with, and why safety margins matter.
 
-* Imaging Modalities: CT, MRI, PET, and their roles in radiation therapy planning.​
-* Image Acquisition and Reconstruction: Understanding the technical aspects and challenges.​
-* Image Preprocessing Techniques: Noise reduction, normalization, and enhancement methods.​
+### The data foundation
 
-## [5: AI for Contouring](contouring/contouring.md)
+**[4: Medical Imaging in Radiation Oncology](medicalImaging/medicalImaging.md)** — Imaging modalities (CT, MRI, PET), acquisition and reconstruction, and the DICOM/DICOM-RT data objects that tie a treatment course together. Included because almost every AI method in radiotherapy is built on this imaging data, and its structure and quality set the ceiling on what any model can achieve.
 
-* Contouring Techniques: Traditional methods vs. AI-driven approaches.​
-* Deep Learning for Contouring: Application of CNNs and U-Net architectures.​
-* Case Studies: Automated tumor and organ-at-risk delineation.​
+### AI across the workflow
 
-## [6: AI in Image Registration and Fusion](registration/registration.md)
+These chapters follow the treatment pathway in order, each pairing the methods with case studies and their evidence base.
 
-* Concepts of Image Registration: Aligning images from different modalities or time points.​
-* AI-enhanced Registration Methods: Learning-based approaches for improved accuracy.​
-* Clinical Applications: Integrating multimodal imaging data for comprehensive analysis.​
+**[5: AI for Contouring](contouring/contouring.md)** — Automated delineation of targets and organs at risk with U-Net-style and foundation segmentation models. Included as the most clinically mature application of AI in radiotherapy, and a useful lens on the shift from *producing* contours to *reviewing* them.
 
-## [7: AI for Treatment Planning](treatmentPlanning/treatmentPlanning.md)
+**[6: AI in Image Registration and Fusion](registration/registration.md)** — Aligning images across modalities and time points, and the learning-based methods that improve on classical registration. Included because registration underpins multimodal planning, adaptive therapy, and much of the contouring and dose work in the surrounding chapters.
 
-* Automated Treatment Planning: Leveraging AI for plan optimization and dose calculation.​
-  * IMRT, VMAT and others.
-* Knowledge-based Planning: Utilizing historical data to inform new treatment plans.​
-* Case Studies: Examples of AI-driven treatment planning systems.​
+**[7: AI for Treatment Planning](treatmentPlanning/treatmentPlanning.md)** — Dose prediction, knowledge-based and automated planning, and optimization for IMRT/VMAT. Included because planning is among the most time-consuming steps in the workflow and one where AI's efficiency gains are most tangible.
 
-## [8: AI for Quality Assurance and Safety](qa/qa.md)
+**[8: AI for Quality Assurance and Safety](qa/qa.md)** — Automated error detection, plan and contour checking, and the regulatory context for AI tools. Included because QA is where AI both helps *and* introduces new failure modes, making it central to safe deployment.
 
-* Quality Assurance Processes: Ensuring accuracy and safety in radiation therapy.​
-* AI Applications in QA: Automated error detection and workflow optimization.​
-* Regulatory Considerations: Compliance with standards and guidelines for AI tools.​
+### Getting it into the clinic
 
-## [9: Validation and Evaluation of AI Models](validation/validation.md)
+**[9: Validation and Evaluation of AI Models](validation/validation.md)** — Performance metrics, clinical validation, subgroup analysis, and post-deployment monitoring. Included as the practical companion to the introduction's evidence framing — the "how do I actually check this?" chapter.
 
-* Performance Metrics: Assessing accuracy, sensitivity, specificity, and robustness.​
-* Clinical Validation: Translating AI models from research to practice.​
-* Continuous Monitoring: Post-deployment evaluation and model updating.​
+**[10: Integration of AI into Clinical Workflow](workflow/workflow.md)** — Workflow analysis, user training and acceptance, and change management. Included because a model only creates value once it is embedded in real clinical practice, and most implementation failures are organizational rather than technical.
 
-## [10: Integration of AI into Clinical Workflow](workflow/workflow.md)
+## Resources and further reading
 
-* Workflow Analysis: Identifying points of integration for AI tools.​
-* User Training and Acceptance: Strategies for effective implementation and adoption by clinical staff.​
-* Change Management: Overcoming barriers to integrating AI into existing systems.​
+A companion **[Resources](resources/index.md)** page collects open-source software for working with radiotherapy data (image I/O, visualization, treatment planning systems, and QA tools) along with external courses and workshops on AI in radiation therapy.
 
-## Open Source Software tools
-
-### Image loading and saving:
-
-* [pydicom](https://pydicom.github.io): An open-source Python package specifically designed for reading and writing radiotherapy DICOM files, enabling easy manipulation of medical imaging data
-* [pydicer](https://australiancancerdatanetwork.github.io/pydicer/index.html): a tool to ease the process of converting Radiotherapy DICOM data objects into a format typically used for research purposes. In addition to data conversion, functionality is provided to help analyse the data. This includes computing radiomic features, radiotherapy dose metrics and auto-segmentation metrics. 
-* [pyradise](https://pyradise.readthedocs.io/en/latest/): is an open-source Python package for building clinically applicable radiotherapy-oriented auto-segmentation solutions. This package addresses two main challenges of auto-segmentation in clinical radiotherapy: data handling and conversion from and to DICOM-RTSS.
-* [dicompyler](https://www.dicompyler.com): An extensible open-source radiation therapy research platform that provides tools for working with DICOM-RT data.
-
-### Imaging and Visualization Libraries:
-
-* [ITK-Snap](https://www.itksnap.org/pmwiki/pmwiki.php): A software tool for segmentation of three-dimensional medical images.
-* [3D Slicer](https://www.slicer.org) with [SlicerRT](https://slicerrt.github.io) extension: A comprehensive platform for medical image informatics, image processing, and three-dimensional visualization with radiation therapy capabilities.
-* [ImageJ](https://imagej.net/ij/): A widely used open-source image processing program designed for scientific multidimensional images.
-
-### Treatment planning systems
-
-* [MatRad](https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.12251): A MATLAB-based, comprehensive toolkit for 3D intensity-modulated radiation therapy with validated clinical accuracy.
-* [OpenTPS](https://www.opentps.org): open-source treatment planning system (TPS) for research in radiation therapy and proton therapy. It was developed in Python with a special focus on simplifying contribution to the core functions to let the user develop their own feature 
-* [JulianA.jl](https://arxiv.org/abs/2407.03858): a novel Julia package for radiotherapy, aiming to provide a modular and flexible foundation for the development and efficient implementation of algorithms and workflows for radiotherapy researchers and clinicians.
-* [FoCa](https://iopscience.iop.org/article/10.1088/0031-9155/59/23/7341): a modular treatment planning system for proton radiotherapy with research and educational purposes.
-* [KiT-RT (C++)](https://github.com/KiT-RT/kitrt_code): targets kinetic equation solutions for therapy.
-* Pencil beam algorithms for proton therapy integrated into 3D Slicer environment.
-
-### Quality Assurance Tools:
-
-* [QATrack+](https://qatrackplus.com): An open-source radiotherapy quality assurance management system built with Python, designed for machine quality control (as opposed to patient specific quality control).
-* [CERR](https://github.com/cerr/CERR) and [pyCERR](https://github.com/cerr/pyCERR): stands for Computational Environment for Radiological Research. CERR/pyCERR is MATLAB/python based software platform for developing and sharing research results using radiation therapy treatment planning and imaging informatics.
-
-### Integration Components:
-
-* [Eclipse Scripting Application Programming Interface](https://docs.developer.varian.com/articles/index.html): While not open-source itself, this API allows integration with the Eclipse treatment planning system and has been used alongside open-source libraries to develop clinical applications.
-* [XiO Python Package](https://www.proquest.com/docview/2576611722?sourcetype=Scholarly%20Journals): An open-source package that adds scripting capability to the Elekta CMS XiO treatment planning system through an external interface, enabling users to script radiotherapy plans.
-* [eIMRT](https://aapm.onlinelibrary.wiley.com/doi/10.1120/jacmp.v10i3.2998): is a remote distributed computing tool that provides users with Internet access to three different services: Monte Carlo optimization of treatment plans, CRT & IMRT treatment optimization, and a database of relevant radiation treatments/clinical cases.
-
-## Further reading
-
-[Michener course on AI in Radiation Therapy](https://michener.ca/ce_course/ai-foundations-medical-imaging-radiation-therapy)
-
-[Stanmore course on AI in Radiation Oncology](https://www.stanmoreuk.org/Home/CourseDetail?courseId=22954)
-
-[ESTRO Advanced Imaging in RT course](https://www.estro.org/Courses/2024/Advanced-Imaging-in-Radiotherapy-Current-use%2C-Futu)
-
-[Symposium on Practical AI in Radiation Oncology](https://www.medschool.umaryland.edu/radonc/education/educational-courses--events/symposium-on-practical-ai-in-radiation-oncology/)
-
-[National Cancer Institute workshop on AI in Radiation Oncology](https://pmc.ncbi.nlm.nih.gov/articles/PMC7293478/)
+Each chapter closes with its own numbered **References** section, with a weblink to every cited source.
 
 ```{toctree}
 :maxdepth: 2
 :caption: Contents
+:hidden:
 intro/intro
 fundamentalAI/index
 fundamentalRO/fundamentalRO
@@ -124,3 +59,5 @@ treatmentPlanning/treatmentPlanning
 qa/qa
 validation/validation
 workflow/workflow
+resources/index
+```
