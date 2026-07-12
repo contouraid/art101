@@ -66,6 +66,8 @@ AI roles form a spectrum:
 
 Risk generally rises with autonomy and irreversibility. The evidence, safeguards, and monitoring should rise with it. Draft generation is not automatically low risk: a plausible draft can anchor reviewers and propagate unnoticed errors.
 
+For text drafting, retrieval-augmented generation, tool calling, and multi-step workflow agents, see [Language Models, Generative AI, and Agents](../fundamentalAI/llm.md). That page distinguishes a model from the integrated system and defines source, permission, validation, and review controls; this chapter focuses on fitting any such system into clinical work.
+
 ### Place the Output Where Work Happens
 
 Users should not need to monitor a separate dashboard or copy results manually when a safe interface can deliver the output inside the treatment planning system, oncology information system, or review environment.

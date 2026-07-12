@@ -102,6 +102,8 @@ Safe use requires a clear action policy. A prediction of "likely pass" should no
 
 Automated plan checks can evaluate prescription consistency, laterality, contour naming, target coverage, organ-at-risk limits, collision risk, machine compatibility, and transfer integrity. Rule-based checks are valuable because their logic is explicit. ML methods can complement them by learning multivariate patterns that are difficult to enumerate.
 
+Language-model chart checking adds free-text extraction and synthesis but does not replace deterministic arithmetic, DICOM parsing, dose engines, or explicit rules. See [Language Models, Generative AI, and Agents](../fundamentalAI/llm.md) for the canonical treatment of source-grounded outputs, tool permissions, prompt injection, evidence maturity, and human review.
+
 ### Error Detection
 
 Useful error-detection datasets should include realistic near misses and deliberately introduced faults, not only routine accepted plans. Examples include:

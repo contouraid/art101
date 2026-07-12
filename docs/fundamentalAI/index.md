@@ -2,7 +2,7 @@
 
 ## How to Use This Guide
 
-This guide is designed for clinicians, researchers, and students interested in the fundamentals of deep learning, with a focus on applications in radiation oncology. Each section builds on the previous, starting from traditional machine learning and progressing to advanced deep learning architectures.
+This guide is designed for clinicians, researchers, and students interested in the fundamentals of deep learning, with a focus on applications in radiation oncology. Each section builds on the previous, starting from traditional machine learning and progressing to advanced deep learning architectures. The companion pages cover [language models, generative AI, and agents](llm.md) and [vision-language models](vlm.md) without duplicating their text-only and multimodal safety requirements.
 
 ---
 
@@ -860,6 +860,7 @@ The choice of architecture depends on factors like the specific segmentation tas
 ```{toctree}
 :maxdepth: 2
 :caption: Contents
+llm
 vlm
 ```
 

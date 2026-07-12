@@ -26,7 +26,7 @@ art101/
 │   ├── conf.py, requirements.txt, Makefile   # Sphinx book build (sphinx_book_theme + myst_parser)
 │   ├── index.md                  # Book cover page, tool/course links, root toctree
 │   ├── intro/intro.md                        # 1: Introduction
-│   ├── fundamentalAI/index.md, vlm.md        # 2: Fundamentals of AI through Deep Learning (+ VLM sub-page)
+│   ├── fundamentalAI/index.md, llm.md, vlm.md # 2: Fundamentals of AI (+ language/agent and VLM sub-pages)
 │   ├── fundamentalRO/fundamentalRO.md        # 3: Fundamentals of Radiation Oncology
 │   ├── medicalImaging/medicalImaging.md      # 4: Medical Imaging in Radiation Oncology
 │   ├── contouring/contouring.md              # 5: AI for Contouring
