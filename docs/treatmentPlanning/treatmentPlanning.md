@@ -205,6 +205,17 @@ Incorporating non-dosimetric factors (e.g., patient comorbidities, concurrent tr
 
 These approaches recognize that optimal planning involves more than just meeting generic dosimetric constraints—it requires considering the specific clinical context and patient characteristics.
 
+## Evidence Synthesis
+
+The cited evidence agrees that dose or DVH prediction and automated optimization can reproduce aspects of prior planning practice and that common benchmarks make technical comparisons more reproducible. It does not show that a lower voxel-dose error automatically yields a deliverable, safer, or clinically preferable plan. Studies vary in disease site, beam geometry, prescription normalization, planning system, comparator quality, and endpoint; these differences can reverse method rankings and limit transportability.
+
+| Task | Population / site | Data scale | Validation design | Comparator | Endpoint | Principal limitation | Maturity |
+|---|---|---|---|---|---|---|---|
+| Knowledge-based dose prediction [[3]](https://doi.org/10.1002/mp.14845) | Head-and-neck IMRT | 340 curated plans | Public challenge with held-out test cases | Common participating methods under one evaluation | Dose error and DVH metrics | Selected, preprocessed plans and fixed challenge endpoints do not measure deliverability, workflow, or patient benefit | **Proof of concept** |
+| Beam-field-guided diffusion dose prediction [[7]](https://doi.org/10.1002/mp.17989) | Liver cancer at one clinical source | Single retrospective clinical dataset; patient count not reported in the accessible abstract | Internal retrospective model comparison | Published dose-prediction baselines | Dose score, DVH score, and structure-specific MAE | 2D inputs, one site/source, and no external, planning-workflow, or outcome evaluation | **Internal retrospective validation** |
+
+Current citations support model performance and describe workflow requirements, but they do not establish broad external validity, improved toxicity or disease control, or causal clinical impact from an AI planning system. No named-product regulatory claim or representative routine-adoption estimate is made. OpenKBP is an open dataset and benchmark, which supports reproducibility without representing all clinical plans. Informative limitations include challenge selection effects and the absence of a guarantee that a predicted dose is deliverable; no comparative harmful or null patient-outcome study is in the cited set. Unanswered questions are whether prospective human-AI planning improves quality and time against a strong clinical baseline, how failures are caught before delivery, whether benefits persist across sites and planning systems, and whether any dosimetric gain changes patient outcomes.
+
 ## Current Research and Recent Advances
 
 Research in deep learning for treatment planning continues to advance rapidly, addressing remaining challenges and expanding capabilities.

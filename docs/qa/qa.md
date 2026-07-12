@@ -183,6 +183,16 @@ Other relevant lifecycle concepts include quality management, risk management, u
 
 An AI system that changes after deployment raises questions about what version is authorized, how modifications are bounded, and what evidence is required. FDA's 2025 final guidance on predetermined change control plans recommends describing planned modifications, the protocol for development, validation and implementation, and an impact assessment [[4]](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence). A local department should still know when a model has changed and whether local revalidation is required.
 
+## Evidence Synthesis
+
+The cited evidence agrees that QA should target clinically meaningful faults and use independent safety layers. A model that reproduces a conventional pass/fail label or explains its own classification has demonstrated component behavior, not that it detects the errors most likely to harm a patient. Evidence is heterogeneous across machine QA, measurement-based patient-specific QA, plan checking, chart checking, sites, injected faults, and institutional policies, so a high score in one setting cannot be generalized to the QA programme as a whole.
+
+| Task | Population / site | Data scale | Validation design | Comparator | Endpoint | Principal limitation | Maturity |
+|---|---|---|---|---|---|---|---|
+| Explainable automated plan QA [[2]](https://pubmed.ncbi.nlm.nih.gov/34844219/) | Prostate and breast planning datasets from one center | Two retrospective site-specific datasets | Internal retrospective analysis of two existing classifiers | LIME versus team-based Shapley explanations; expert interpretation | Explanation consistency and classifier rationale | Explanations can rationalize a wrong classifier; no prospective user-decision or safety endpoint | **Internal retrospective validation** |
+
+The evidence supports retrospective classifier analysis and cross-institution consensus principles, but not silent prospective performance, improved human decisions, fewer incidents, or patient outcomes for an AI QA system. FDA guidance defines a possible regulatory process; this chapter makes no claim that a named system is cleared. Representative routine-adoption evidence is absent. The cited explainability study explicitly concludes that its classifiers should confirm rather than replace expert QA, which is an informative limit on stronger automation claims. Data and code openness are not established for the clinical classifiers. Unanswered questions are sensitivity to rare consequential faults, common-mode failure with the primary system, prospective alert burden and automation bias, safe drift thresholds, and whether AI changes incident rates rather than only surrogate labels.
+
 ## Current Research and Recent Advances
 
 - **Explainable automated QA:** Research is moving beyond binary plan flags toward explanations that identify influential regions or features. Early work shows feasibility, but explanation quality and the effect on reviewer decisions need direct evaluation [[2]](https://pubmed.ncbi.nlm.nih.gov/34844219/). _(added: 2026-07)_
@@ -202,6 +212,6 @@ An AI system that changes after deployment raises questions about what version i
 ## References
 
 1. Miften M, Olch A, Mihailidis D, et al. Tolerance limits and methodologies for IMRT measurement-based verification QA: Recommendations of AAPM Task Group No. 218. *Medical Physics*. 2018;45(4):e53-e83. [DOI](https://doi.org/10.1002/mp.12810)
-2. Nyflot MJ, et al. Understanding machine learning classifier decisions in automated radiotherapy quality assurance. *Medical Physics*. 2022;49(1):370-382. [PubMed](https://pubmed.ncbi.nlm.nih.gov/34844219/)
+2. Chen Y, Aleman DM, Purdie TG, McIntosh C. Understanding machine learning classifier decisions in automated radiotherapy quality assurance. *Physics in Medicine & Biology*. 2022;67(2). [PubMed](https://pubmed.ncbi.nlm.nih.gov/34844219/)
 3. International Electrotechnical Commission. IEC 62304:2006+A1:2015, Medical device software—Software life cycle processes. [IEC publication](https://webstore.iec.ch/en/publication/22794)
 4. U.S. Food and Drug Administration. *Marketing Submission Recommendations for a Predetermined Change Control Plan for Artificial Intelligence-Enabled Device Software Functions*. Final guidance; 2025. [FDA guidance](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/marketing-submission-recommendations-predetermined-change-control-plan-artificial-intelligence)

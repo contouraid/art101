@@ -286,6 +286,16 @@ Use a balanced set of measures:
 
 Measure the full pathway. A model that shortens one task but increases downstream correction has not created the claimed value.
 
+## Evidence Synthesis
+
+The cited evidence agrees that deployment depends on governance, workforce, data infrastructure, interfaces, local validation, and feedback—not model availability alone. The implementation literature is heterogeneous across health systems and tasks, while the strongest adoption estimate here is a national cross-sectional survey rather than a longitudinal effectiveness study. Availability, reported use, and organizational readiness therefore should not be conflated with safer care or better outcomes.
+
+| Task | Population / site | Data scale | Validation design | Comparator | Endpoint | Principal limitation | Maturity |
+|---|---|---|---|---|---|---|---|
+| RT automation and adaptive-RT adoption [[3]](https://doi.org/10.1016/j.ejmp.2026.105867) | Italian radiotherapy and medical-physics departments | 61 of 133 departments responded (46%) | National cross-sectional survey | Adoption across tasks and center characteristics | Reported routine use, maturity, QA, and barriers | Nonresponse, self-report, one country, and no effectiveness or patient endpoint | **Routine adoption** |
+
+The survey supports routine adoption for some tasks among responding centers: autosegmentation was reported more often than autoplanning, while formal automation-specific FMEA was uncommon. That combination is informative negative evidence against treating availability as end-to-end maturity. WHO's cross-national readiness assessment and governance guidance add system and human-centered context, but they are not evaluations of a named RT system [[1]](https://www.who.int/publications/i/item/9789240029200) [[2]](https://www.who.int/europe/publications/i/item/WHO-EURO-2025-12707-52481-81028). The cited set does not supply system-level model performance, external clinical validity, causal workflow improvement, patient benefit, or a named-product regulatory determination. Survey instruments and policy reports support auditability, but patient-level datasets and implementation code are not the object of these sources. Unanswered questions are whether adoption persists over time, how it changes staffing and error recovery, which local controls prevent harm, whether benefits reach resource-constrained settings, and whether any workflow change improves patient outcomes or equity.
+
 ## Current Research and Recent Advances
 
 - **Readiness and workforce capacity:** WHO's 2025 assessment across 50 European-region Member States highlights governance, workforce readiness, data governance, and stakeholder engagement as health-system prerequisites for AI integration [[2]](https://www.who.int/europe/publications/i/item/WHO-EURO-2025-12707-52481-81028). _(added: 2026-07)_

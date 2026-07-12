@@ -240,11 +240,22 @@ Designing optimal workflows that combine automated contouring with efficient hum
 
 Establishing best practices for commissioning, validating, and monitoring auto-contouring systems in clinical practice.
 
-Clinical integration should be evaluated as a human-AI workflow: editing time, consequential misses, downstream dosimetry, inter-user variation, and failures under distribution shift matter in addition to average overlap [[6]](https://doi.org/10.1016/j.radonc.2020.09.019).
+Clinical integration should be evaluated as a human-AI workflow: editing time, consequential misses, downstream dosimetry, inter-user variation, and failures under distribution shift matter in addition to average overlap [[6]](https://doi.org/10.1016/j.phro.2020.10.001).
+
+## Evidence Synthesis
+
+The cited evidence agrees that geometric overlap alone is inadequate: boundary errors, editing patterns, anatomy, imaging quality, and the downstream use all change the clinical meaning of a score. Results are heterogeneous across structure sets, modalities, prompts, institutions, and reference contours, so performance for a common organ cannot be transferred to a tumor target or a new site without validation. MedSAM supplies an unusually large, diverse research resource, but its public benchmark performance remains proof of concept for radiotherapy until the exact target/OAR task and workflow are evaluated [[7]](https://doi.org/10.1038/s41467-024-44824-z).
+
+| Task | Population / site | Data scale | Validation design | Comparator | Endpoint | Principal limitation | Maturity |
+|---|---|---|---|---|---|---|---|
+| Promptable medical-image segmentation [[7]](https://doi.org/10.1038/s41467-024-44824-z) | Multiple modalities and anatomical sites; not a dedicated RT cohort | 1,570,263 image-mask pairs across 10 modalities | Multi-dataset retrospective benchmark | Specialist segmentation methods and prompt settings | Segmentation geometry | Broad benchmark does not establish target/OAR acceptability, dosimetric safety, or RT workflow benefit | **Proof of concept** |
+| Deep-learning OAR contour review [[6]](https://doi.org/10.1016/j.phro.2020.10.001) | Head-and-neck OARs at one clinical center | Single-center clinical cohort | Retrospective analysis of contours edited in routine practice | AI contour before versus after expert adjustment | Edit magnitude and location | No concurrent manual-only workflow comparator, patient endpoint, or external site | **Human-factors/workflow evaluation** |
+
+Current citations support technical performance and a single-center editing analysis, but not general external validity, patient benefit, or a causal reduction in workload. No named-product regulatory claim is made here, and the cited set does not quantify representative routine adoption. Open research assets improve reproducibility, yet expert labels and clinical acceptance rules remain site-dependent. The main unanswered questions are which errors alter planning decisions or dose, how reliably prospective QA catches consequential failures, whether time savings persist without automation bias, and whether benefits transport across institutions and model updates. The cited evidence includes variable and occasionally large edits in difficult cases rather than a comparative harmful or null patient-outcome study; the next currency review should search explicitly for negative external and prospective workflow results.
 
 - **Foundation-model adaptation:** Promptable segmentation models are being adapted to medical images, but performance varies by anatomy, modality, prompt, and adaptation strategy. Radiotherapy use remains benchmark evidence unless target/OAR evaluation and clinical review are reported [[7]](https://doi.org/10.1038/s41467-024-44824-z). _(added: 2026-07)_
 - **Evaluation beyond a single overlap score:** Current validation guidance recommends selecting complementary metrics from the task's domain interest, error type, and properties rather than applying a fixed metric set [[5]](https://doi.org/10.1038/s41592-023-02151-z). _(added: 2026-07)_
-- **Workflow endpoints:** Clinical studies increasingly measure correction burden and acceptability as well as geometry. These findings remain dependent on site, structure set, baseline workflow, and model version [[6]](https://doi.org/10.1016/j.radonc.2020.09.019). _(added: 2026-07)_
+- **Workflow endpoints:** Clinical studies increasingly measure correction burden and acceptability as well as geometry. These findings remain dependent on site, structure set, baseline workflow, and model version [[6]](https://doi.org/10.1016/j.phro.2020.10.001). _(added: 2026-07)_
 
 ## Recap
 
@@ -263,5 +274,5 @@ Clinical integration should be evaluated as a human-AI workflow: editing time, c
 3. Milletari F, Navab N, Ahmadi SA. V-Net: fully convolutional neural networks for volumetric medical image segmentation. *3DV*. 2016. [DOI](https://doi.org/10.1109/3DV.2016.79)
 4. Lin TY, Goyal P, Girshick R, He K, Dollár P. Focal loss for dense object detection. *ICCV*. 2017. [DOI](https://doi.org/10.1109/ICCV.2017.324)
 5. Maier-Hein L, Reinke A, Godau P, et al. Metrics reloaded: recommendations for image analysis validation. *Nature Methods*. 2024. [DOI](https://doi.org/10.1038/s41592-023-02151-z)
-6. Brouwer CL, Boukerroui D, Oliveira J, et al. Assessment of manual adjustment performed in clinical practice following deep learning contouring for head and neck organs at risk in radiotherapy. *Radiotherapy and Oncology*. 2020. [DOI](https://doi.org/10.1016/j.radonc.2020.09.019)
+6. Brouwer CL, Boukerroui D, Oliveira J, et al. Assessment of manual adjustment performed in clinical practice following deep learning contouring for head and neck organs at risk in radiotherapy. *Physics and Imaging in Radiation Oncology*. 2020;16:54-60. [DOI](https://doi.org/10.1016/j.phro.2020.10.001)
 7. Ma J, He Y, Li F, Han L, You C, Wang B. Segment anything in medical images. *Nature Communications*. 2024. [DOI](https://doi.org/10.1038/s41467-024-44824-z)
