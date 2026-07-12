@@ -28,6 +28,33 @@ Append one entry per cycle, in the format below, at the **top** of the log (newe
 
 ## Log
 
+## 2026-07-12 language-model and agent closure
+
+**Chapters reviewed:** `fundamentalAI/` (new `llm.md`, plus `index.md` and `vlm.md` cross-links), `qa/`, and `workflow/`
+**Todos closed:** `p1-cover-language-models-generative-ai-and-agents.md` (moved to `todo/done/`)
+**Todos opened:** none
+
+### Searches run
+- language-model foundations: "BERT pretraining", "instruction tuning human feedback", "retrieval augmented generation", and "Toolformer" (ACL and NeurIPS primary pages) — discriminative, generative, RAG, and tool-use foundations verified.
+- security: "indirect prompt injection LLM-integrated applications" (ACM AISec) — peer-reviewed attack model and DOI verified.
+- healthcare evaluation: "large language models clinical knowledge" and "testing evaluation healthcare LLM systematic review" (Nature and JAMA) — benchmark limitations and the 519-study evidence map verified.
+- radiation oncology: "LLM radiation oncology patient care questions" and "LLM ACR radiation oncology examination" (JAMA Network Open and AI in Precision Oncology) — peer-reviewed task-specific results and limitations verified.
+- attribution: "fabricated citations ChatGPT" (Scientific Reports) — peer-reviewed reference-fabrication analysis verified.
+
+### Added
+- fundamentalAI/llm: canonical novice-level language-model, RAG, tool-use, and agent foundations; a source-to-reviewed-output pipeline; radiotherapy use-case maturity table; security and human-factors controls; and clinically weighted evaluation with 11 verified sources.
+- fundamentalAI index and VLM: sibling navigation and explicit canonical boundaries between text-only and multimodal content.
+- QA and workflow: links from chart checking, drafting, and automation to the language-model chapter's source, permission, validation, and review controls.
+
+### Rejected
+- Vendor claims and general chatbot demonstrations were not treated as evidence of radiation-oncology clinical capability.
+- Unpublished radiation-oncology preprints were not used to support clinical claims; peer-reviewed task-specific evidence was available for the claims retained.
+- Examination and question-answer scores were not described as evidence of clinical competence, autonomous use, or patient benefit.
+
+### Notes for next cycle
+- `fundamentalAI/llm.md` is the canonical home for text-only LLMs, RAG, tools, and agents; `fundamentalAI/vlm.md` remains canonical for visual-language architectures, volumetric inputs, grounding, and image-specific evaluation.
+- Clean strict Sphinx build completed with zero warnings; citation numbering and links were reconciled separately.
+
 ## 2026-07-12 clinical-prediction closure
 
 **Chapters reviewed:** new `clinicalPrediction/` chapter plus cross-links in `fundamentalRO/`, `medicalImaging/`, `treatmentPlanning/`, and `validation/`

@@ -13,7 +13,7 @@ The chapters move from foundations, to the imaging data everything depends on, t
 
 **[1: Introduction](intro/intro.md)** — Establishes the shared vocabulary (AI, machine learning, deep learning), the learning paradigms, and the "ladder of evidence" used to judge clinical AI claims. Read this first; every later chapter leans on its framing of technical performance versus clinical utility.
 
-**[2: Fundamentals of AI through Deep Learning](fundamentalAI/index.md)** — Covers the machine-learning and deep-learning ideas that recur throughout the book: model training and evaluation, neural networks, convolutional architectures, and the newer vision–language and foundation models. Included so that readers can follow *how* the clinical tools in later chapters actually work, rather than treating them as black boxes.
+**[2: Fundamentals of AI through Deep Learning](fundamentalAI/index.md)** — Covers the machine-learning and deep-learning ideas that recur throughout the book: model training and evaluation, neural networks, convolutional architectures, language models, generative AI, agents, and vision-language models. Included so that readers can follow *how* the clinical tools in later chapters actually work, rather than treating them as black boxes.
 
 **[3: Fundamentals of Radiation Oncology](fundamentalRO/fundamentalRO.md)** — A compact primer on radiation physics, radiobiology, and how a course of treatment is delivered. Included so that readers from a computing background understand the clinical problem AI is being asked to help with, and why safety margins matter.
 

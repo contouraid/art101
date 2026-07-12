@@ -14,7 +14,7 @@ These models are powerful when the task is fixed and annotated examples are avai
 
 ### Language Models
 
-A language model learns patterns over text tokens. A large language model can generate, summarize, classify, or reason over text, but a text-only model does not directly observe an image. A textual description inserted into its prompt is an interpretation produced by someone or something else.
+A language model learns patterns over text tokens. A large language model can generate, summarize, classify, or reason over text, but a text-only model does not directly observe an image. A textual description inserted into its prompt is an interpretation produced by someone or something else. The companion [Language Models, Generative AI, and Agents](llm.md) page is the canonical home for tokenization, instruction tuning, RAG, tool use, agents, text-specific risks, and clinical evaluation.
 
 ### Vision-Language Models
 
