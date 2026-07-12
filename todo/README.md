@@ -83,12 +83,11 @@ When the work is complete, change the title prefix from `TODO` to `DONE`, add `*
 
 Sorted by priority prefix (p0 → p3), then alphabetically within each tier.
 `review-log.md` is a standing log, not a closeable todo — no priority prefix.
-Last reconciled against the working tree on **2026-07-12** (clinical-prediction and language-model closures).
+Last reconciled against the working tree on **2026-07-12** (radiotherapy-clinical-foundations closure).
 
 | File | Section | Priority | Status |
 |---|---|---|---|
 | [p1-establish-novice-learning-architecture.md](p1-establish-novice-learning-architecture.md) | Root (cross-cutting) | P1 High | 🔴 No explicit learning routes, outcomes, or shared prerequisite structure |
-| [p1-strengthen-radiotherapy-clinical-foundations.md](p1-strengthen-radiotherapy-clinical-foundations.md) | `fundamentalRO/` | P1 High | 🔴 Clinical foundations are too compressed for non-RT readers |
 | [p2-establish-research-synthesis-and-evidence-grading.md](p2-establish-research-synthesis-and-evidence-grading.md) | Root (cross-cutting) | P2 Medium | 🔴 Recency tracking lacks evidence grading and critical synthesis |
 | [p2-literature-currency-contouring.md](p2-literature-currency-contouring.md) | `contouring/` | P2 Medium | 🔴 No coverage of foundation-model-based segmentation |
 | [p2-literature-currency-fundamentalAI.md](p2-literature-currency-fundamentalAI.md) | `fundamentalAI/` | P2 Medium | 🔴 No "Recent Advances" section yet |
@@ -114,3 +113,4 @@ Completed work is retained in [`done/`](done/). The archive currently includes:
 - [p1-cover-language-models-generative-ai-and-agents.md](done/p1-cover-language-models-generative-ai-and-agents.md)
 - [p1-consolidate-responsible-ai-regulation-and-security.md](done/p1-consolidate-responsible-ai-regulation-and-security.md)
 - [p1-fix-broken-toc-anchors.md](done/p1-fix-broken-toc-anchors.md)
+- [p1-strengthen-radiotherapy-clinical-foundations.md](done/p1-strengthen-radiotherapy-clinical-foundations.md)

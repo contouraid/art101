@@ -28,6 +28,34 @@ Append one entry per cycle, in the format below, at the **top** of the log (newe
 
 ## Log
 
+## 2026-07-12 radiotherapy-clinical-foundations closure
+
+**Chapters reviewed:** `fundamentalRO/`
+**Todos closed:** `p1-strengthen-radiotherapy-clinical-foundations.md` (moved to `todo/done/`)
+**Todos opened:** none
+
+### Searches run
+- clinical pathway and team: "radiotherapy process of care clinical team safety" (ASTRO and IAEA) — multidisciplinary pathway, roles, handoffs, and programme requirements verified.
+- terminology and prescription: "ICRU target volumes prescription reporting photon IMRT stereotactic" (ICRU Reports 50, 83, and 91) — GTV/CTV/PTV, IMRT reporting, and stereotactic concepts verified.
+- modalities: "NCI external beam radiation photon electron proton stereotactic", "IAEA brachytherapy dosimetry", and "IAEA radiopharmaceutical therapy dosimetry" — modality purpose, limitations, and distinct dosimetry pathways verified.
+- motion, calculation, and verification: "AAPM TG-76 respiratory motion", "IAEA treatment planning commissioning", and "AAPM TG-219 independent dose verification" — motion strategies, TPS commissioning, and independent-check principles verified.
+- uncertainty and safety: "IAEA accuracy requirements uncertainties radiotherapy" and "AAPM TG-100 risk analysis" — uncertainty classes and risk-based quality-management framework verified.
+- toxicity and follow-up: "NCI radiation therapy side effects" — stable organ-specific patient guidance verified.
+
+### Added
+- fundamentalRO: complete consultation-to-survivorship pathway; intent/prescription/fractionation distinctions; modality comparisons; simulation, motion, planning, verification, IGRT, adaptation, toxicity, follow-up, and uncertainty foundations.
+- fundamentalRO: jurisdiction-aware team and handoff map plus an eight-row AI clinical-accountability matrix tying every task to its decision, professional owner, failure consequence, and independent controls.
+- fundamentalRO: 14 new authoritative references, bringing the chapter total to 17 while preserving the separate recent-research section.
+
+### Rejected
+- Vendor descriptions and institution-specific role assignments were not used for stable clinical foundations.
+- Technique-specific outcome superiority was not inferred from favorable dosimetry or modality physics alone.
+- Fast-moving research claims were not added to the foundational body; the existing `p2-literature-currency-fundamentalRO.md` remains the home for the dedicated recent-literature cycle.
+
+### Notes for next cycle
+- Chapter 3 is now the canonical clinical mental model for later application chapters; downstream content should link rather than re-explain the full pathway or role map.
+- Clean strict Sphinx build completed with zero warnings; all 17 citation numbers and URLs matched the reference list.
+
 ## 2026-07-12 language-model and agent closure
 
 **Chapters reviewed:** `fundamentalAI/` (new `llm.md`, plus `index.md` and `vlm.md` cross-links), `qa/`, and `workflow/`
